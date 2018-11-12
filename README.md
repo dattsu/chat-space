@@ -7,13 +7,13 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, add index|
 |email|text|null: false|
 |password|text|null: false|
 
 ### Association
 - has_many :members
-- has_many :groups through: :members
+- has_many :groups, through: :members
 - has_many :messages
 
 
@@ -22,12 +22,12 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
+|name|string|null: false|
 |user_id|references|null: false, foreign_key: true|
 
 ### Association
 - has_many :members
-- has_many :users through: :members
+- has_many :users, through: :members
 - has_many :messages
 
 
@@ -43,7 +43,6 @@
 ### Association
 - belongs_to :group
 - belongs_to :user
-- has_many through
 
 
 
