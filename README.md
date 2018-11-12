@@ -7,7 +7,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, add index|
+|name|string|null: false, unique, add index|
 |email|text|null: false|
 |password|text|null: false|
 
@@ -23,7 +23,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|user_id|references|null: false, foreign_key: true|
 
 ### Association
 - has_many :members
