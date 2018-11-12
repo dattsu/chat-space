@@ -7,8 +7,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique, add index|
-|email|text|null: false|
+|name|string|null: false, add index|
+|email|text|null: false, unique|
 |password|text|null: false|
 
 ### Association
