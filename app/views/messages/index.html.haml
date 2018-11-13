@@ -1,0 +1,61 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+
+%body
+
+.chat.clearfix
+  .side
+    .side--chat-user--acttion
+      .side--chat-user--acttion-name
+        ユーザーネーム
+        .side--chat-user--acttion-icon
+          %i.fa.fa-pencil-square-o.fa-lg
+          %i.fa.fa-cog.fa-lg
+
+    .side--status
+      .side--status--group-name
+        サイドグループネーム
+      .side--status--message
+        サイドメッセージテキスト
+    .side--status
+      .side--status--group-name
+        サイドグループネーム2
+      .side--status--message
+        サイドメッセージテキスト2
+
+
+
+  .main
+    .main--chat-group.clearfix
+      .main--chat-group-name
+        group name
+      .main--chat-group--edit-button
+        EDIT
+      .main--chat-group--members-name
+        Members:
+
+
+    .main--message-content
+
+      .main--message-content--box
+        .main--message
+          .main--message--user-name
+            main user name
+          .main--message--time
+            2018/11/12 00:00
+          .main--message--text
+            main message text
+
+
+
+      .message--send.clearfix
+        .message--send--typefield
+          text type field
+          .message--send--typefield--icon
+            %i.far.fa-image.fa-lg
+        .message--send--button
+          Send
+
+

@@ -1,0 +1,173 @@
+/*
+ *= require font-awesome
+ */
+
+@import "./reset";
+
+
+$main_width:calc(100vw - 300px);
+
+
+
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.chat {
+  height: 100vh;
+  width: 100vw;
+}
+
+// サイドここから
+.side {
+  height: 100vh;
+  width: 300px;
+  background-color: #2f3e51;
+  float: left;
+}
+
+.chat-user--acttion {
+  width: 100%;
+  height: 96px;
+  color: #FFFFFF;
+  background-color: #253141;
+
+}
+.chat-user--acttion--name {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 35px 0 0 20px;
+}
+.chat-user--acttion--icon {
+  margin-right: 20px;
+  float: right;
+}
+
+
+.chat-side--status {
+  margin: 20px 20px 40px 20px;
+}
+.chat-side--status--group-name {
+  font-size: 15px;
+  color: #FFFFFF;
+
+}
+.chat-side--status--message{
+  font-size: 11px;
+  color: #FFFFFF;
+  margin-top:5px;
+}
+
+// サイドここまで
+
+
+// メイン上ここから
+.main {
+  height: 100vh;
+  width: calc(100vw - 300px);
+  // background-color: #AAAAAA;
+  float: left;
+}
+
+.main--chat-group {
+  height: 96px;
+  padding-left: 40px;
+  border-bottom: solid;
+  border-color: #eeeeee;
+  border-width: 1px;
+}
+
+.group-name {
+  font-size: 20px;
+  color: #333333;
+  padding-top: 35px;
+  // padding-bottom: 15px;
+  float: left;
+}
+
+.edit-button {
+  height: 40px;
+  line-height: 40px;
+  border: solid;
+  border-color: #38AEF0;
+  float: right;
+  margin-top: 28px;
+  margin-right: 40px;
+  padding: 0 20px;
+  color: #38AEF0;
+}
+
+.group-members {
+  font-size: 12px;
+  color: #999999;
+  clear: both;
+}
+
+
+// メイン２ここから
+
+.message-content {
+  width: 100%;
+  // position: relative;
+}
+.message-content--box {
+  height: calc(100vh - 96px);
+  margin-left: 40px;
+  overflow: scroll;
+}
+.message {
+  color: #434A54;
+}
+.user-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 40px;
+  float: left;
+}
+.time {
+  font-size: 12px;
+  margin: 40px 0 10px 10px;
+  float: left;
+}
+.text {
+  font-size: 14px;
+  clear: both;
+}
+
+
+.message--send {
+  height: 90px;
+  width: calc(100vw - 300px);
+  position: absolute;
+  bottom: 0px;
+  background-color: #AAAAAA;
+}
+
+.message--send--typefield {
+  height: 50px;
+  width: calc(100vw - 495px);
+  font-size:16px;
+  color: #434A54;
+  line-height: 50px;
+  margin: 20px 0;
+  margin-left: 40px;
+  padding-left: 10px;
+  background-color: white;
+  float: left;
+}
+.message--send--typefield--icon {
+  margin-right:10px;
+  float: right;
+}
+
+.message--send--button {
+  height: 50px;
+  line-height: 50px;
+  color: #FFFFFF;
+  background-color: #38AEF0;
+  margin: 20px 40px 20px 15px;
+  padding: 0 20px;
+  float: right;
+}
