@@ -1,7 +1,22 @@
 /*
  *= require font-awesome
  */
+@import "font-awesome";
+// colors.scssとflash.scssをインポート
+@import "config/colors";
 
 @import "./reset";
+
+@import "modules/flash";
+@import "modules/side_bar";
+
+@import "./user";
+@import "./group";
+
+
 @import "./clearfix";
 @import "./main_view";
+
+
+
+
