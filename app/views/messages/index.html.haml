@@ -1,31 +1,13 @@
 .chat.clearfix
-  .side
-    .side__chat-user__acttion
-      .side__chat-user__acttion-name
-        ユーザーネーム
-        .side__chat-user__acttion-icon
-          %i.fa.fa-pencil-square-o.fa-lg
-          %i.fa.fa-cog.fa-lg
 
-    .side__status
-      .side__status__group-name
-        サイドグループネーム
-      .side__status__message
-        サイドメッセージテキスト
-    .side__status
-      .side__status__group-name
-        サイドグループネーム2
-      .side__status__message
-        サイドメッセージテキスト2
-
-
+  = render partial: "shered/side_bar"
 
   .main
     .main__chat-group.clearfix
       .main__chat-group-name
         group name
-      .main__chat-group__edit-button
-        EDIT
+      .main__chat-group__edit-button#edit-button
+        = link_to "EDIT", edit_group_path(current_user)
       .main__chat-group__members
         Members:
 
