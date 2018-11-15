@@ -6,16 +6,16 @@
 @import "config/colors";
 
 @import "./reset";
-
+@import "./clearfix";
 @import "modules/flash";
 @import "modules/side_bar";
+@import "modules/main";
 
 @import "./user";
 @import "./group";
 
 
-@import "./clearfix";
-@import "./main_view";
+
 
 
 
