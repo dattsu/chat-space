@@ -87,7 +87,7 @@ a {
   background-color: $back_gray;
   .form__message {
     height: 50px;
-    width: calc(100vw - 495px);
+    width: calc(100vw - 550px);
     background-color: #FFF;
     font-size:16px;
     line-height: 50px;
@@ -97,12 +97,17 @@ a {
     float: left;
   }
   .form__mask {
-    background-color: red;
+    float: left;
+    margin-top: 40px;
+    position: relative;
+    right: 35px;
     .form__mask__image {
       .icon {
         margin-right: 10px;
         float: right;
-        background-color: red;
+      }
+      .hidden {
+        display: none;
       }
     }
   }
