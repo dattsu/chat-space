@@ -19,25 +19,10 @@
 
       .form
         = form_for [@group, @message] do |f|
-          = f.text_field :body, class: 'form__message', placeholder: 'type a message' do
-
-            .form__mask
-              = f.label :image, class: 'form__mask__image' do
-                = fa_icon 'picture-o', class: 'icon'
-                = f.file_field :image, class: 'hidden'
-
+          = f.text_field :body, class: 'form__message', placeholder: 'type a message'
+          .form__mask
+            = f.label :image, class: 'form__mask__image' do
+              = fa_icon 'picture-o', class: 'icon'
+              = f.file_field :image, class: 'hidden'
           = f.submit 'Send', class: 'form__submit'
-
-
-
-
-
-  / <div class='chat-footer__body'>
-  /   <textarea row="1" placeholder="type a message" name="message[body]" id="message_body">
-  /   </textarea>
-  /   <label class='chat-footer__file'>
-  /     <input type="file" name="message[image]" id="message_image" />
-  /     <i class='fa fa-image'></i>
-  /   </label>
-  / </div>
 
