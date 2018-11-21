@@ -1,0 +1,28 @@
+.chat.clearfix
+  = render 'shared/side_bar'
+
+  .main
+    .main__chat-group.clearfix
+      .main__chat-group-name
+        = @group.name
+      .main__chat-group__edit-button#edit-button
+        = link_to "EDIT", edit_group_path(current_user)
+      .main__chat-group__members
+        Members:
+        - @group.users.each do |user|
+          = user.name
+
+    .main__message.clearfix
+      .main__message-content
+        = render partial: 'message', collection: @messages
+
+
+      .form
+        = form_for [@group, @message] do |f|
+          = f.text_field :body, class: 'form__message', placeholder: 'type a message'
+          .form__mask
+            = f.label :image, class: 'form__mask__image' do
+              = fa_icon 'picture-o', class: 'icon'
+              = f.file_field :image, class: 'hidden'
+
+          = f.submit 'Send', class: 'form__submit'
