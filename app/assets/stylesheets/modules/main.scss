@@ -51,10 +51,10 @@ a {
 
 
   .main__message {
-    width: 100%;
+    // width: 100%;
     color: $main_font_color;
     &-content {
-      height: calc(100vh - 96px);
+      height: calc(100vh - 186px);
       overflow: scroll;
       &__box {
         margin-left: 40px;
