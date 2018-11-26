@@ -1,19 +1,20 @@
 $(function() {
   function buildHTML(message){
 
-  var image = message.is_image_present ? `<img src='${message.image.url}'> ` : ''
+  var image = (message.image)? `<img class="lower-message__image" src="${message.image}">` : "";
 
-    var html = `<div class= "main__message-content__box" >
-                  <div class= "main__message-content__box__user-name" >${message.user_name}
-                  </div>
-                  <div class = "main__message-content__box__time" >${message.created_at})
-                  </div>
-                  <div class ="main__message-content__box__text" >${message.body}
-                  </div>
-                     ${image}
-                </div>`
-    return html;
-  }
+      var html = `<div class= "main__message-content__box" >
+                    <div class= "main__message-content__box__user-name" >${message.user_name}
+                    </div>
+                    <div class = "main__message-content__box__time" >${message.date}
+                    </div>
+                    <div class ="main__message-content__box__text" >${message.body}
+                    </div>
+                      ${image}
+                  </div>`
+      return html;
+
+}
 
   $('.form__message_send').on('submit', function(e){
       e.preventDefault();
@@ -35,10 +36,12 @@ $(function() {
           $('.form__message_send').val('');
           $messages.animate({scrollTop: $messages[0].scrollHeight}, 'fast');
         })
-         .fail(function(message){
+         .fail(function(){
            alert('error');
-         });
-         return false;
-         });
-});
+         })
+         .always(function(){
+          $(".form__submit").prop("disabled", false);
+          })
+         })
+  })
 
