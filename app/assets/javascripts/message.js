@@ -33,7 +33,6 @@ $(function() {
           $messages = $(".main__message-content");
           $messages.append(html);
           $('form')[0].reset();
-          $('.form__message_send').val('');
           $messages.animate({scrollTop: $messages[0].scrollHeight}, 'fast');
         })
          .fail(function(){
