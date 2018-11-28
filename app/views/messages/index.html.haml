@@ -6,7 +6,7 @@
       .main__chat-group-name
         = @group.name
       .main__chat-group__edit-button#edit-button
-        = link_to "EDIT", edit_group_path(current_user)
+        = link_to "EDIT", edit_group_path(@group)
       .main__chat-group__members
         Members:
         - @group.users.each do |user|
