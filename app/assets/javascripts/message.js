@@ -14,7 +14,6 @@ $(function() {
                   </div>`
       return html;
   }
-
   $('.form__message_send').on('submit', function(e){
       e.preventDefault();
       var formData = new FormData(this);
@@ -59,7 +58,6 @@ $(function() {
             $messages = $(".main__message-content");
             $messages.append(html);
           })
-          $('form')[0].reset();
           $messages.animate({scrollTop: $messages[0].scrollHeight}, 'fast');
          })
          .fail(function(){
