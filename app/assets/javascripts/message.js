@@ -58,13 +58,11 @@ $(function() {
             $messages = $(".main__message-content");
             $messages.append(html);
           })
-          $messages.animate({scrollTop: $messages[0].scrollHeight}, 'fast');
          })
          .fail(function(){
            alert('自動更新error');
          })
     } else {
       clearInterval(interval);
-     }} , 5000 );
 
 });
