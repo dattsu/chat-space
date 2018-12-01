@@ -11,7 +11,7 @@
             = fa_icon 'cog', class: 'icon'
 
 
-  - current_user.groups.each do |group|
+  - @groups.each do |group|
     = link_to group_messages_path(group) do
       .side__status
         .side__status__group-name

@@ -2,6 +2,8 @@ class MessagesController < ApplicationController
   before_action  :set_group
 
   def index
+
+    @groups = current_user.groups
     @message = Message.new
     @messages = @group.messages.includes(:user)
 # 今より大きいメッセージIDがあれば
